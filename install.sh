@@ -1,4 +1,5 @@
 #!/bin/sh
+# try to trigger build
 
 _fetch_sources(){
   wget -O /tmp/nanorc.zip https://github.com/scopatz/nanorc/archive/master.zip
