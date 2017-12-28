@@ -1,4 +1,5 @@
 #!/bin/sh
+#trigger build
 
 _fetch_sources(){
   wget -O /tmp/nanorc.zip https://github.com/gmcclins/nanorc/archive/master.zip
