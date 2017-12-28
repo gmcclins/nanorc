@@ -1,12 +1,12 @@
 sudo: required
-dist: trusty
+language: generic
 
-before_install:
-  - echo 'deb http://archive.ubuntu.com/ubuntu trusty-backports main restricted universe multiverse' | sudo tee -a /etc/apt/sources.list
-  - sudo apt-get -qq update
-  - sudo apt-get install -y shellcheck
+services:
+  - docker
 
-git:
-  depth: 3
+script:
+  - wget -O- http://travis.debian.net/script.sh | sh -
 
-script: ./test.sh
+branches:
+  except:
+    - /^debian\/\d/
